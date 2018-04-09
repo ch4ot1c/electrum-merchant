@@ -39,7 +39,7 @@ def walkFiles(dirName):
 
 def main():
     parser = argparse.ArgumentParser(description='Install merchant add on files\
-                                     for Electrum wallet running in daemon mode.',
+                                     for BTCP Electrum wallet running in daemon mode.',
                                      prog = "python3 -m electrum-merchant",
                                      epilog = "Consult documentation on:\
                                      http://docs.electrum.org/en/latest/merchant.html",

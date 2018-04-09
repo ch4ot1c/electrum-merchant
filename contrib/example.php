@@ -3,7 +3,7 @@
 require_once 'jsonRPCClient.php';
 $electrum = new jsonRPCClient('http://localhost:7777');
 
-echo '<b>Wallet balance</b><br />'."\n";
+echo '<b>Wallet Balance</b><br />'."\n";
 try {
 
     $balance = $electrum->getbalance();

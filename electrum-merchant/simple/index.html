@@ -42,7 +42,7 @@ if (id) {
         .done( function(data) {
 	    new QRCode(document.getElementById("qrcode"), data.URI);
             $("<p />").text(data.memo).appendTo($("p#reason"));
-            $("<p />").text(data.amount/100000000 + "BTC").appendTo($("p#amount"));
+            $("<p />").text(data.amount/100000000 + "BTCP").appendTo($("p#amount"));
 	    $("a").attr("href", data.URI);
             $("<p />").text("Powered by Electrum").appendTo($("p#powered"));
             var websocket_server = data.websocket_server;
@@ -94,7 +94,7 @@ if (id) {
 };
 
 // See http://stackoverflow.com/questions/29186154/chrome-clicking-mailto-links-closes-websocket-connection
-$(document).on('click', 'a[href^="bitcoin:"]', function (e) {
+$(document).on('click', 'a[href^="bitcoinprivate:"]', function (e) {
     e.preventDefault();
     var btcWindow = window.open($(e.currentTarget).attr('href'));
     btcWindow.close();
@@ -109,7 +109,7 @@ $(document).on('click', 'a[href^="bitcoin:"]', function (e) {
             <p id="reason"></p>
             <p id="amount"></p>
 	    <div style="background-color:#7777aa; border-radius: 5px; padding:10px;">
-		<a style="color:#ffffff; text-decoration:none;" id="paylink" target="_blank">Pay with Bitcoin</a>
+		<a style="color:#ffffff; text-decoration:none;" id="paylink" target="_blank">Pay with Bitcoin Private</a>
 	    </div>
 	    <br/>
 	    <div id="qrcode" align="center"></div>
